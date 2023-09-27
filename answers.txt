@@ -1,0 +1,10 @@
+1. specifying TCP socket: socket.SOCK_STREAM
+2. A server socket listens for incoming connections and a client socket is used to send and receive data
+3. setsockopt
+    "s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)"
+    the 1 here is specifying whether or not to set the SO_REUSEADDR socket option. 
+    When this option is set, the operating system allows you to use the same port 
+    number to accept incoming connections even if a socket bound to this port is already in use.
+4. The IP address and the port number from which the client is connecting
+5. recv() returns an empty byte string indicating that the connection has been closed
+6. git link: 
